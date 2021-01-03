@@ -1,4 +1,4 @@
-# tech-camp
+# Tech Camp
 
 ## Project setup
 ```

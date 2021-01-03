@@ -1,32 +1,62 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <header>
+      <NavBar></NavBar>
+    </header>
+    <router-view :personInfo="person" @save="save" />
+    <Footer></Footer>
   </div>
 </template>
+<script>
+import NavBar from "./components/navbar.vue";
+import Footer from "./components/footer.vue";
 
+export default {
+  name: "App",
+  components: {
+    NavBar: NavBar,
+    Footer: Footer,
+  },
+  data: function() {
+    return {
+      person: {
+        FullName: "",
+        Email: "",
+        Address: "",
+        ZipCode: "",
+        City: "",
+        Country: "",
+        ChildeFullName: "",
+        ChildeEmail: "",
+        Gender: "",
+        Age: "",
+        Message: "",
+        activities: ""
+      },
+    };
+  },
+  methods: {
+    save: function(fromComponent) {
+      this.person.FullName = fromComponent.FullName;
+      this.person.Email = fromComponent.Email;
+      this.person.Address = fromComponent.Address;
+      this.person.ZipCode = fromComponent.ZipCode;
+      this.person.Country = fromComponent.Country;
+      this.person.City = fromComponent.City;
+      this.person.ChildeFullName = fromComponent.ChildeFullName;
+      this.person.ChildeEmail = fromComponent.ChildeEmail;
+      this.person.Gender = fromComponent.Gender;
+      this.person.Age = fromComponent.Age;
+      this.person.Message = fromComponent.Message;
+      this.person.activities = fromComponent.activities;
+    },
+  },
+};
+</script>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 </style>

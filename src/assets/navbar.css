@@ -1,0 +1,93 @@
+:root {
+    --black: #050405;
+    --textColorHover: #43655A;
+    --nutralcolor: #DADDE2;
+  }
+
+  .logo{
+      display: none;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  .nav__bar {
+    box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+    background: #ffffff;
+    
+  }
+  
+  .available ul {
+    display: block;
+  }
+  .container {
+    z-index: 1;
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+  }
+  .container a {
+    color: black;
+    text-decoration: none;
+    font-size: 26px;
+    padding: 30px;
+  }
+  .menuIcon {
+    width: 30px;
+    margin: 30px 30px 30px 30px;
+  }
+  
+  ul {
+    display: none;
+    color: #fff;
+    line-height: 60px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+  }
+  
+  a:hover {
+    color: var(--textColorHover);
+    font-weight: bold;
+    font-size: 27px;
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media only screen and (min-width: 1000px) {
+    .nav__bar{
+        background-color: var(--black);
+        color: var(--nutralcolor);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:0 2%;
+    }
+.logo{
+    display: flex;
+}
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      list-style-type: none;
+    }
+    li {
+      padding: 0 15px;
+    }
+    .menuIcon {
+      display: none;
+    }
+    .container a{
+        color: var(--nutralcolor);
+    }
+    a:hover {
+        color: var(--textColorHover);
+        font-weight: bold;
+        font-size: 27px;
+      }
+    .container {
+        background-color: var(--black);
+      padding: 10px;
+      z-index: 0;
+      position: static;
+    }
+  }

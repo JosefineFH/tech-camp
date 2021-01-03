@@ -1,0 +1,126 @@
+
+:root {
+  --black: #050405;
+  --textColorHover: #D72034;
+  --nutralcolor: #DADDE2;
+}
+
+button {
+  color: white;
+  background-color: var(--black);
+  border: none;
+  width: 250px;
+  font-size: 19px;
+  border-radius: 2px;
+  padding: 10px;
+  transition: all 1s ease 0s;
+  border-radius: 3px;
+
+}
+
+h2, h1, h3{
+  font-family: "XoloniumRegular";
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+h1{
+  text-align: center;
+  color: var(--textColorHover);
+  font-size: 2rem;
+  padding-top: 4%;
+}
+
+.goingBack{
+  font-size: 18px;
+  color: var(--textColorHover);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.goingBack:hover{
+  font-size: 18px;
+  letter-spacing: 0px;
+}
+
+@media only screen and (min-width: 900px) {
+  
+  h1{
+    font-size: 3rem;
+  }
+}
+
+
+
+@media only screen and (min-width: 1000px) {
+
+  /* Checkboxes */
+ 
+
+  label {
+    font-size: 20px;
+    display: inline
+  }
+
+  .checker {
+    display: inline
+  }
+
+  select {
+    margin-left: 20px;
+  }
+
+  p {
+    color: #181d45;
+    font-size: 20px;
+  }
+
+  input {
+    font-family: 'Titillium Web', sans-serif;
+    width: 250px;
+    font-size: 15px;
+    border: none;
+    border: solid 1px #181d45;
+    padding: 2px;
+    border-radius: 4px;
+
+  }
+
+  #wrapper {
+    margin: auto;
+    width: 70%;
+  }
+
+  #footer {
+    width: 100%;
+    height: 50px;
+  }
+
+  button {
+    margin: 30px 0px 30px 0px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+
+
+  button {
+    border: none;
+    width: 250px;
+    font-size: 19px;
+    border-radius: 2px;
+    padding: 10px;
+    transition: all 1s ease 0s;
+    border-radius: 3px;
+    margin: auto;
+    display: block;
+
+  }
+
+
+
+
+
+
+
+}

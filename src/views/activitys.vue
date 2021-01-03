@@ -126,7 +126,6 @@ export default {
   methods: {
     save() {
       this.$emit("save", this.person);
-      console.log(this.person);
 
       if (this.person.activities.length == 0) {
         this.errors.push("Select an activity");

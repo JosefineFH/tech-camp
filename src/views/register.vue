@@ -163,7 +163,6 @@ export default {
     };
   },
   created: function() {
-    console.log(this.person);
     this.person.FullName = this.personInfo.FullName;
     this.person.Email = this.personInfo.Email;
     this.person.Address = this.personInfo.Address;
